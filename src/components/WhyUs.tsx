@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ShieldCheck, Target } from "lucide-react";
 import InfoCard from "./InfoCard.tsx";
+import ApplyButton from "./ApplyButton.tsx";
 import { containerVariants } from "../lib/animations.ts";
 
 type WhyUsProps = {
@@ -32,16 +33,10 @@ export default function WhyUs({ onApply }: WhyUsProps) {
             icon={ShieldCheck}
             title="Farklı olarak ne yapıyoruz?"
             action={
-              <button
-                onClick={onApply}
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-red-600 hover:bg-red-500 text-white font-bold text-lg shadow-[0_0_30px_rgba(230,0,0,0.4)] hover:shadow-[0_0_40px_rgba(230,0,0,0.6)] transition-all cursor-pointer relative z-10 hover:-translate-y-1"
-              >
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-white" />
-                </span>
-                Platformu beklemeden şimdi burada formu doldur!
-              </button>
+              <div className="relative z-10 flex flex-col items-start gap-3">
+                <p className="text-sm text-zinc-400">Platform açılmadan başvurunu oluşturabilirsin.</p>
+                <ApplyButton onApply={onApply} fullWidthOnMobile />
+              </div>
             }
           >
             {

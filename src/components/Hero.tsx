@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import ApplyButton from "./ApplyButton.tsx";
+import Button from "./ui/Button.tsx";
 
 type HeroProps = {
   onApply: () => void;
@@ -33,20 +35,11 @@ export default function Hero({ onApply }: HeroProps) {
             uyuma dayanır.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={onApply}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#E60000] text-white hover:bg-red-700 px-8 py-4 rounded-xl font-display font-bold transition-colors cursor-pointer"
-            >
-              Şimdi Başvur
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <a
-              href="#nasil-calisir"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-600 font-display font-semibold transition-colors"
-            >
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <ApplyButton onApply={onApply} fullWidthOnMobile />
+            <Button href="#nasil-calisir" variant="secondary" linkOnMobile trailingIcon={ArrowRight}>
               Nasıl çalışır?
-            </a>
+            </Button>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-x-3 gap-y-1.5 text-sm">

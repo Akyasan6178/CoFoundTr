@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ApplyButton from "./ApplyButton.tsx";
 
 type NavbarProps = {
   onApply: () => void;
@@ -37,13 +38,7 @@ export default function Navbar({ onApply }: NavbarProps) {
           </span>
         </a>
 
-        <button
-          type="button"
-          onClick={onApply}
-          className="h-9 px-4 rounded-lg bg-[#E60000] hover:bg-red-700 text-white text-sm font-display font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400"
-        >
-          Şimdi Başvur
-        </button>
+        <ApplyButton onApply={onApply} size="sm" />
       </nav>
     </header>
   );

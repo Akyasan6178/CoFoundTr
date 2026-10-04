@@ -30,8 +30,8 @@ export default function App() {
       <Navbar onApply={openForm} />
       <Hero onApply={openForm} />
       <HowItWorks />
-      <ApplyCTA onApply={openForm} />
       <WhyUs onApply={openForm} />
+      <ApplyCTA onApply={openForm} />
       <Footer />
       <TallyModal isOpen={isFormOpen} onClose={closeForm} />
     </div>
