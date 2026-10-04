@@ -18,7 +18,7 @@ export default function ApplyButton({ onApply, size = "lg", fullWidthOnMobile = 
       trailingIcon={size === "lg" ? ArrowRight : undefined}
       className={className}
     >
-      Şimdi Başvur
+      Şimdi başvur
     </Button>
   );
 }

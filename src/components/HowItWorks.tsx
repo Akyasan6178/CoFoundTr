@@ -14,9 +14,9 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Ekibini kurmak işte bu kadar kolay!
+            Nasıl çalışır?
           </h2>
-          <p className="text-zinc-400">İki basit adımla ekibini kur, hemen inşa etmeye başla.</p>
+          <p className="text-zinc-400">İki adımda: kendini anlat, uyumu birlikte görün.</p>
         </motion.div>
 
         <motion.div
@@ -28,12 +28,12 @@ export default function HowItWorks() {
         >
           <StepCard
             icon={UserPlus}
-            title="1. Vizyonunu Paylaş"
+            title="1. Vizyonunu paylaş"
             description="Kendini, projeni veya aradığın eksik yeteneği bize anlat. Formu doldur, seni tamamlayan ortağı bulalım."
           />
           <StepCard
             icon={Zap}
-            title="2. Test Et & İnşa Et"
+            title="2. Test et ve inşa et"
             description="Tanış, enerjine bak ve birlikte çalışıp çalışamayacağınızı gör. Uyumu yakalarsan girişime hız ver."
           />
         </motion.div>

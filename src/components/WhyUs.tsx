@@ -21,10 +21,10 @@ export default function WhyUs({ onApply }: WhyUsProps) {
         >
           <InfoCard variant="default" icon={Target} title="Neden CoFoundTR?">
             {
-              "Türkiye'de co-founder bulmak hâlâ rastlantıya bağlı. LinkedIn mesajları cevapsız kalıyor, kulüp etkinlikleri yetmiyor. CoFoundTR, seni sadece profil değil — "
+              "Türkiye'de co-founder bulmak hâlâ rastlantıya bağlı. LinkedIn mesajları cevapsız kalıyor, kulüp etkinlikleri yetmiyor. CoFoundTR eşleşmeyi profile göre değil, "
             }
-            <span className="font-semibold text-red-500">gerçek uyum</span>
-            {" üzerinden eşleştiriyor."}
+            <span className="font-semibold text-red-500">uyuma göre</span>
+            {" yapıyor."}
           </InfoCard>
 
           <InfoCard
@@ -38,11 +38,9 @@ export default function WhyUs({ onApply }: WhyUsProps) {
               </div>
             }
           >
-            {
-              "Sadece tanıştırmıyoruz — test ettiriyoruz. Eşleşmeden önce her iki tarafa üç soru soruyoruz: "
-            }
-            <span className="font-semibold text-white">uyum, çalışma tarzı, niyet.</span>
-            {" Cevapları gördükten sonra eşleşme sağlanıyor."}
+            {"Tanıştırmadan önce uyumu test ediyoruz. İki taraf da "}
+            <span className="font-semibold text-white">uyum, çalışma tarzı ve niyet</span>
+            {" üzerine üç soruyu yanıtlar. Eşleşmeyi cevapları gördükten sonra yapıyoruz."}
           </InfoCard>
         </motion.div>
       </div>

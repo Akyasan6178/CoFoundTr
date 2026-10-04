@@ -20,7 +20,9 @@ export default function TallyModal({ isOpen, onClose }: TallyModalProps) {
             className="w-full h-full relative overflow-hidden flex flex-col"
           >
             <button
+              type="button"
               onClick={onClose}
+              aria-label="Formu kapat"
               className="absolute top-6 right-6 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-zinc-800/50 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors shadow-sm"
             >
               <X className="w-6 h-6" />

@@ -1,7 +1,7 @@
 export const TALLY_FORM_URL =
   "https://tally.so/embed/jaY2P6?hideTitle=1&dynamicHeight=1";
 
-export const TALLY_FORM_TITLE = "Başvuru Formu";
+export const TALLY_FORM_TITLE = "Başvuru formu";
 
 export const SOCIAL_LINKS = {
   instagram:
