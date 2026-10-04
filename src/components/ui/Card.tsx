@@ -7,8 +7,8 @@ export type CardTone = "default" | "accent";
 export type CardPadding = "md" | "lg";
 
 const tones: Record<CardTone, string> = {
-  default: "bg-white/[0.02] border-line",
-  accent: "bg-[#E60000]/[0.03] border-[#E60000]/20",
+  default: "bg-surface border-line",
+  accent: "bg-accent-surface border-accent-line",
 };
 
 const paddings: Record<CardPadding, string> = {
@@ -30,7 +30,7 @@ export default function Card({ tone = "default", padding = "md", children }: Car
   return (
     <motion.div
       variants={itemVariants}
-      className={`rounded-2xl border shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] ${tones[tone]} ${paddings[padding]}`}
+      className={`rounded-2xl border shadow-card ${tones[tone]} ${paddings[padding]}`}
     >
       {children}
     </motion.div>
@@ -39,7 +39,7 @@ export default function Card({ tone = "default", padding = "md", children }: Car
 
 export function CardIcon({ icon: Icon }: { icon: LucideIcon }) {
   return (
-    <div className="w-10 h-10 mb-6 rounded-lg border border-line bg-white/[0.03] flex items-center justify-center text-zinc-300">
+    <div className="w-10 h-10 mb-6 rounded-lg border border-line bg-surface-raised flex items-center justify-center text-fg-secondary">
       <Icon aria-hidden="true" className="w-5 h-5" />
     </div>
   );

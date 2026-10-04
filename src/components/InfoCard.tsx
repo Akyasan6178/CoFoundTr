@@ -16,8 +16,8 @@ export default function InfoCard({ variant = "default", icon, title, children, a
   return (
     <Card tone={variant === "highlight" ? "accent" : "default"} padding="lg">
       <CardIcon icon={icon} />
-      <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4 text-white">{title}</h2>
-      <p className="text-lg sm:text-xl text-zinc-400 leading-relaxed">{children}</p>
+      <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4 text-fg-strong">{title}</h2>
+      <p className="text-lg sm:text-xl text-fg-muted leading-relaxed">{children}</p>
       {action && <div className="mt-8">{action}</div>}
     </Card>
   );

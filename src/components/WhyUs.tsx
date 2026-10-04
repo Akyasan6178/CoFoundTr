@@ -10,7 +10,7 @@ type WhyUsProps = {
 
 export default function WhyUs({ onApply }: WhyUsProps) {
   return (
-    <section className="py-24 sm:py-32 px-6 border-t border-line bg-[#09090B]">
+    <section className="py-24 sm:py-32 px-6 border-t border-line bg-canvas">
       <div className="max-w-4xl mx-auto">
         <motion.div
           variants={containerVariants}
@@ -23,7 +23,7 @@ export default function WhyUs({ onApply }: WhyUsProps) {
             {
               "Türkiye'de co-founder bulmak hâlâ rastlantıya bağlı. LinkedIn mesajları cevapsız kalıyor, kulüp etkinlikleri yetmiyor. CoFoundTR eşleşmeyi profile göre değil, "
             }
-            <span className="font-semibold text-red-500">uyuma göre</span>
+            <span className="font-semibold text-accent-text">uyuma göre</span>
             {" yapıyor."}
           </InfoCard>
 
@@ -33,13 +33,13 @@ export default function WhyUs({ onApply }: WhyUsProps) {
             title="Farklı olarak ne yapıyoruz?"
             action={
               <div className="flex flex-col items-start gap-3">
-                <p className="text-sm text-zinc-400">Platform açılmadan başvurunu oluşturabilirsin.</p>
+                <p className="text-sm text-fg-muted">Platform açılmadan başvurunu oluşturabilirsin.</p>
                 <ApplyButton onApply={onApply} source="whyus" variant="secondary" fullWidthOnMobile />
               </div>
             }
           >
             {"Tanıştırmadan önce uyumu test ediyoruz. İki taraf da "}
-            <span className="font-semibold text-white">uyum, çalışma tarzı ve niyet</span>
+            <span className="font-semibold text-fg-strong">uyum, çalışma tarzı ve niyet</span>
             {" üzerine üç soruyu yanıtlar. Eşleşmeyi cevapları gördükten sonra yapıyoruz."}
           </InfoCard>
         </motion.div>

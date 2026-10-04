@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen font-sans overflow-x-clip selection:bg-red-500/30 text-zinc-100">
+      <div className="min-h-screen font-sans overflow-x-clip selection:bg-selection text-fg">
         <Navbar onApply={openForm} showCta={!isHeroCtaInView} />
         <Hero onApply={openForm} ctaRef={heroCtaRef} />
         <HowItWorks />

@@ -10,7 +10,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-zinc-950">
+    <footer className="border-t border-line bg-canvas">
       {/* Mobil: logo, sosyal linkler, telif. sm+: solda logo ve telif, linkler telif satırıyla aynı hizada sağda. */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 grid gap-6 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-x-8">
         <Logo />
@@ -34,7 +34,7 @@ export default function Footer() {
           ))}
         </ul>
 
-        <p className="text-sm text-zinc-400 sm:col-start-1 sm:row-start-2">© {new Date().getFullYear()} CoFoundTR. Tüm hakları saklıdır.</p>
+        <p className="text-sm text-fg-muted sm:col-start-1 sm:row-start-2">© {new Date().getFullYear()} CoFoundTR. Tüm hakları saklıdır.</p>
       </div>
     </footer>
   );

@@ -23,7 +23,7 @@ export default function Navbar({ onApply, showCta }: NavbarProps) {
     <header
       className={`sticky top-0 z-40 border-b transition-colors duration-200 ${
         isScrolled
-          ? "bg-[#09090B]/70 backdrop-blur-md border-line"
+          ? "bg-header-glass backdrop-blur-md border-line"
           : "bg-transparent border-transparent"
       }`}
     >

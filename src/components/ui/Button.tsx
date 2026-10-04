@@ -29,11 +29,11 @@ const base =
   "inline-flex items-center justify-center gap-2 font-display font-semibold whitespace-nowrap transition-colors duration-150 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-[#E60000] text-white hover:bg-[#C40000] active:bg-[#A80000] focus-visible:outline-red-400",
+  primary: "bg-accent text-on-accent hover:bg-accent-hover active:bg-accent-active focus-visible:outline-focus-accent",
   secondary:
-    "border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-600 focus-visible:outline-zinc-400",
+    "border border-line-strong text-fg-secondary hover:text-fg-strong hover:border-line-hover focus-visible:outline-fg-muted",
   // Sessiz metin bağlantısı (ör. footer sosyal linkleri): çerçeve ve zemin yok, hover yalnızca renk.
-  ghost: "text-zinc-400 hover:text-white focus-visible:outline-zinc-400",
+  ghost: "text-fg-muted hover:text-fg-strong focus-visible:outline-fg-muted",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -43,7 +43,7 @@ const sizes: Record<ButtonSize, string> = {
 
 // Mobilde metin bağlantısı, sm ve üstünde secondary lg buton. Çakışan sınıf olmasın diye ayrı tutuluyor.
 const secondaryLinkOnMobile =
-  "py-2 rounded-lg text-base text-zinc-400 hover:text-white focus-visible:outline-zinc-400 sm:py-0 sm:h-12 sm:px-6 sm:rounded-xl sm:border sm:border-zinc-800 sm:text-zinc-300 sm:hover:border-zinc-600";
+  "py-2 rounded-lg text-base text-fg-muted hover:text-fg-strong focus-visible:outline-fg-muted sm:py-0 sm:h-12 sm:px-6 sm:rounded-xl sm:border sm:border-line-strong sm:text-fg-secondary sm:hover:border-line-hover";
 
 export default function Button(props: ButtonProps) {
   const {

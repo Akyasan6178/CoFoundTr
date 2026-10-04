@@ -12,7 +12,7 @@ export default function TallyModal({ src, onClose }: TallyModalProps) {
   return (
     <AnimatePresence>
       {src && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#09090B]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-canvas">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function TallyModal({ src, onClose }: TallyModalProps) {
               type="button"
               onClick={onClose}
               aria-label="Formu kapat"
-              className="absolute top-6 right-6 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-zinc-800/50 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors shadow-sm"
+              className="absolute top-6 right-6 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-line-strong/50 text-fg-muted hover:text-fg-strong hover:bg-line-strong transition-colors shadow-sm"
             >
               <X className="w-6 h-6" />
             </button>

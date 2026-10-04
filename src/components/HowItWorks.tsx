@@ -5,7 +5,7 @@ import { containerVariants } from "../lib/animations.ts";
 
 export default function HowItWorks() {
   return (
-    <section id="nasil-calisir" className="py-24 sm:py-32 px-6 border-t border-line bg-[#09090B] scroll-mt-20">
+    <section id="nasil-calisir" className="py-24 sm:py-32 px-6 border-t border-line bg-canvas scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,7 +16,7 @@ export default function HowItWorks() {
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
             Nasıl çalışır?
           </h2>
-          <p className="text-zinc-400">İki adımda: kendini anlat, uyumu birlikte görün.</p>
+          <p className="text-fg-muted">İki adımda: kendini anlat, uyumu birlikte görün.</p>
         </motion.div>
 
         <motion.div

@@ -11,8 +11,8 @@ export default function StepCard({ icon, title, description }: StepCardProps) {
   return (
     <Card>
       <CardIcon icon={icon} />
-      <h3 className="text-lg font-display font-semibold mb-2 text-white">{title}</h3>
-      <p className="text-zinc-400 leading-relaxed">{description}</p>
+      <h3 className="text-lg font-display font-semibold mb-2 text-fg-strong">{title}</h3>
+      <p className="text-fg-muted leading-relaxed">{description}</p>
     </Card>
   );
 }
