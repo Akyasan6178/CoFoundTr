@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans overflow-x-hidden selection:bg-red-500/30 text-zinc-100">
       <Navbar />
-      <Hero />
+      <Hero onApply={openForm} />
       <HowItWorks />
       <ApplyCTA onApply={openForm} />
       <WhyUs onApply={openForm} />
