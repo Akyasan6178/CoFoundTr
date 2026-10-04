@@ -20,7 +20,7 @@ export default function Navbar({ onApply }: NavbarProps) {
     <header
       className={`sticky top-0 z-40 border-b transition-colors duration-200 ${
         isScrolled
-          ? "bg-[#09090B]/70 backdrop-blur-md border-white/[0.06]"
+          ? "bg-[#09090B]/70 backdrop-blur-md border-line"
           : "bg-transparent border-transparent"
       }`}
     >

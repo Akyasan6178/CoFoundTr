@@ -10,15 +10,14 @@ type WhyUsProps = {
 
 export default function WhyUs({ onApply }: WhyUsProps) {
   return (
-    <section className="py-32 px-6 border-t border-zinc-900 bg-[#09090B] overflow-hidden relative">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-500/5 blur-[150px] rounded-full pointer-events-none" />
-      <div className="max-w-4xl mx-auto relative z-10">
+    <section className="py-24 sm:py-32 px-6 border-t border-line bg-[#09090B]">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="space-y-16"
+          className="flex flex-col gap-6 sm:gap-8"
         >
           <InfoCard variant="default" icon={Target} title="Neden CoFoundTR?">
             {
@@ -33,7 +32,7 @@ export default function WhyUs({ onApply }: WhyUsProps) {
             icon={ShieldCheck}
             title="Farklı olarak ne yapıyoruz?"
             action={
-              <div className="relative z-10 flex flex-col items-start gap-3">
+              <div className="flex flex-col items-start gap-3">
                 <p className="text-sm text-zinc-400">Platform açılmadan başvurunu oluşturabilirsin.</p>
                 <ApplyButton onApply={onApply} fullWidthOnMobile />
               </div>

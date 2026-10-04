@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MotionConfig } from "motion/react";
 import Navbar from "./components/Navbar.tsx";
 import Hero from "./components/Hero.tsx";
 import HowItWorks from "./components/HowItWorks.tsx";
@@ -26,14 +27,16 @@ export default function App() {
   const closeForm = () => setIsFormOpen(false);
 
   return (
-    <div className="min-h-screen font-sans overflow-x-clip selection:bg-red-500/30 text-zinc-100">
-      <Navbar onApply={openForm} />
-      <Hero onApply={openForm} />
-      <HowItWorks />
-      <WhyUs onApply={openForm} />
-      <ApplyCTA onApply={openForm} />
-      <Footer />
-      <TallyModal isOpen={isFormOpen} onClose={closeForm} />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen font-sans overflow-x-clip selection:bg-red-500/30 text-zinc-100">
+        <Navbar onApply={openForm} />
+        <Hero onApply={openForm} />
+        <HowItWorks />
+        <WhyUs onApply={openForm} />
+        <ApplyCTA onApply={openForm} />
+        <Footer />
+        <TallyModal isOpen={isFormOpen} onClose={closeForm} />
+      </div>
+    </MotionConfig>
   );
 }

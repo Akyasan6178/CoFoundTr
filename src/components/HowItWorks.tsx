@@ -5,7 +5,7 @@ import { containerVariants } from "../lib/animations.ts";
 
 export default function HowItWorks() {
   return (
-    <section id="nasil-calisir" className="py-24 px-6 border-t border-zinc-900 bg-[#09090B] scroll-mt-20">
+    <section id="nasil-calisir" className="py-24 sm:py-32 px-6 border-t border-line bg-[#09090B] scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function HowItWorks() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 gap-6 sm:gap-8"
         >
           <StepCard
             icon={UserPlus}
