@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import ApplyButton from "./ApplyButton.tsx";
+import ApplyButton, { type OnApply } from "./ApplyButton.tsx";
 import Logo from "./Logo.tsx";
 
 type NavbarProps = {
-  onApply: () => void;
+  onApply: OnApply;
+  /** Hero CTA'ları görünürken false: aynı ekranda iki birincil CTA olmasın. */
+  showCta: boolean;
 };
 
-export default function Navbar({ onApply }: NavbarProps) {
+export default function Navbar({ onApply, showCta }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Sayfa kaydırılınca cam görünümüne geç; state yalnızca eşik aşılınca değişir.
@@ -28,7 +30,13 @@ export default function Navbar({ onApply }: NavbarProps) {
       <nav className="max-w-6xl mx-auto h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between">
         <Logo />
 
-        <ApplyButton onApply={onApply} size="sm" />
+        {/* Gizliyken DOM'da kalır (düzen kaymaz), inert ile odak ve ekran okuyucudan çıkar. */}
+        <div
+          inert={!showCta}
+          className={`transition-opacity duration-200 ${showCta ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        >
+          <ApplyButton onApply={onApply} source="navbar" size="sm" />
+        </div>
       </nav>
     </header>
   );

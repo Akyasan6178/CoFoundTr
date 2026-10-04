@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode, Ref } from "react";
 import type { LucideIcon } from "lucide-react";
 
 export type ButtonVariant = "primary" | "secondary" | "ghost";
@@ -18,8 +18,9 @@ type BaseProps = {
   children: ReactNode;
 };
 
+// React 19: ref normal bir prop olarak gelir ve ...rest ile <button>'a iletilir.
 type AsButton = BaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & { href?: undefined };
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> & { href?: undefined; ref?: Ref<HTMLButtonElement> };
 type AsLink = BaseProps & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & { href: string };
 
 export type ButtonProps = AsButton | AsLink;

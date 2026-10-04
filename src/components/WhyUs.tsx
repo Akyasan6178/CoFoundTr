@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 import { ShieldCheck, Target } from "lucide-react";
 import InfoCard from "./InfoCard.tsx";
-import ApplyButton from "./ApplyButton.tsx";
+import ApplyButton, { type OnApply } from "./ApplyButton.tsx";
 import { containerVariants } from "../lib/animations.ts";
 
 type WhyUsProps = {
-  onApply: () => void;
+  onApply: OnApply;
 };
 
 export default function WhyUs({ onApply }: WhyUsProps) {
@@ -34,7 +34,7 @@ export default function WhyUs({ onApply }: WhyUsProps) {
             action={
               <div className="flex flex-col items-start gap-3">
                 <p className="text-sm text-zinc-400">Platform açılmadan başvurunu oluşturabilirsin.</p>
-                <ApplyButton onApply={onApply} fullWidthOnMobile />
+                <ApplyButton onApply={onApply} source="whyus" variant="secondary" fullWidthOnMobile />
               </div>
             }
           >

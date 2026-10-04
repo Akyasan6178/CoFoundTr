@@ -3,6 +3,15 @@ export const TALLY_FORM_URL =
 
 export const TALLY_FORM_TITLE = "Başvuru formu";
 
+/** Formu hangi CTA'nın açtığı; Tally'deki "source" hidden field'ına yazılır. */
+export type CtaSource = "navbar" | "hero" | "whyus" | "closing";
+
+export function getTallyFormUrl(source: CtaSource): string {
+  const url = new URL(TALLY_FORM_URL);
+  url.searchParams.set("source", source);
+  return url.toString();
+}
+
 export const SOCIAL_LINKS = {
   instagram:
     "https://www.instagram.com/cofoundtr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",

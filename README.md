@@ -43,6 +43,9 @@ Başvuru formu, `TallyModal` içinde iframe olarak açılıyor:
 `https://tally.so/embed/jaY2P6?hideTitle=1&dynamicHeight=1`.
 Form adresini değiştirmek için `src/config/site.ts` dosyasındaki `TALLY_FORM_URL` değerini güncelleyin.
 
+Her başvuru CTA'sı formu kendi `source` değeriyle açar (`navbar`, `hero`, `whyus`, `closing`); değer form adresine `&source=…` olarak eklenir.
+Tally'de kaydedilmesi için formda adı tam olarak `source` olan bir **Hidden fields** bloğu bulunmalıdır; yoksa parametre yok sayılır ve form normal çalışır.
+
 ## Deploy
 
 `npm run build` sonrası `dist/` klasörünün içeriği yayınlanır. Asset yolları `/assets/...` şeklinde mutlak olduğundan site alan adının kökünden servis edilmelidir (eski build'le aynı davranış). Bir alt yoldan yayınlanacaksa `vite.config.ts` içindeki `base` değeri güncellenmelidir.

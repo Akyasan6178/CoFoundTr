@@ -1,7 +1,7 @@
-import ApplyButton from "./ApplyButton.tsx";
+import ApplyButton, { type OnApply } from "./ApplyButton.tsx";
 
 type ApplyCTAProps = {
-  onApply: () => void;
+  onApply: OnApply;
 };
 
 export default function ApplyCTA({ onApply }: ApplyCTAProps) {
@@ -12,7 +12,7 @@ export default function ApplyCTA({ onApply }: ApplyCTAProps) {
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Başvurunu oluştur.</h2>
         <p className="text-xl text-zinc-400 mb-10">Formu doldur; eşleşme, cevaplarınızdaki uyuma göre yapılır.</p>
         <div className="flex justify-center">
-          <ApplyButton onApply={onApply} fullWidthOnMobile />
+          <ApplyButton onApply={onApply} source="closing" fullWidthOnMobile />
         </div>
       </div>
     </section>

@@ -1,15 +1,18 @@
+import type { Ref } from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import ApplyButton from "./ApplyButton.tsx";
+import ApplyButton, { type OnApply } from "./ApplyButton.tsx";
 import Button from "./ui/Button.tsx";
 
 type HeroProps = {
-  onApply: () => void;
+  onApply: OnApply;
+  /** Birincil CTA'yı izlemek için (navbar CTA'sının görünürlüğü). */
+  ctaRef?: Ref<HTMLButtonElement>;
 };
 
 const TRUST_ITEMS = ["Uyum", "Çalışma tarzı", "Niyet"];
 
-export default function Hero({ onApply }: HeroProps) {
+export default function Hero({ onApply, ctaRef }: HeroProps) {
   return (
     <main className="relative pt-16 sm:pt-20 pb-24 px-6 overflow-hidden">
       {/* Kenarlarına ulaşmadan sönen yumuşak ışık; kesik kenar oluşmaz. */}
@@ -36,7 +39,7 @@ export default function Hero({ onApply }: HeroProps) {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <ApplyButton onApply={onApply} fullWidthOnMobile />
+            <ApplyButton ref={ctaRef} onApply={onApply} source="hero" fullWidthOnMobile />
             <Button href="#nasil-calisir" variant="secondary" linkOnMobile trailingIcon={ArrowRight}>
               Nasıl çalışır?
             </Button>
