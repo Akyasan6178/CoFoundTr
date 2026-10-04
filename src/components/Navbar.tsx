@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ApplyButton from "./ApplyButton.tsx";
+import Logo from "./Logo.tsx";
 
 type NavbarProps = {
   onApply: () => void;
@@ -25,18 +26,7 @@ export default function Navbar({ onApply }: NavbarProps) {
       }`}
     >
       <nav className="max-w-6xl mx-auto h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between">
-        <a
-          href="#"
-          aria-label="CoFoundTR ana sayfa"
-          className="flex flex-col items-start select-none rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-500"
-        >
-          <span className="text-[15px] sm:text-[18px] leading-[0.8] font-display font-black tracking-tighter text-white ml-px">
-            CO
-          </span>
-          <span className="text-[19px] sm:text-[24px] leading-[0.9] font-display font-extrabold tracking-tighter text-white">
-            Found<span className="text-[#E60000]">TR</span>
-          </span>
-        </a>
+        <Logo />
 
         <ApplyButton onApply={onApply} size="sm" />
       </nav>

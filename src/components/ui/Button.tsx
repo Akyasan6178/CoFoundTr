@@ -1,7 +1,7 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 
-export type ButtonVariant = "primary" | "secondary";
+export type ButtonVariant = "primary" | "secondary" | "ghost";
 export type ButtonSize = "sm" | "lg";
 
 type BaseProps = {
@@ -11,6 +11,7 @@ type BaseProps = {
   fullWidthOnMobile?: boolean;
   /** Yalnızca secondary: mobilde çerçevesiz metin bağlantısı, sm ve üstünde buton. */
   linkOnMobile?: boolean;
+  leadingIcon?: LucideIcon;
   trailingIcon?: LucideIcon;
   /** Yalnızca yerleşim (margin, hizalama) için; renk ve ölçüler buradan değiştirilmez. */
   className?: string;
@@ -30,6 +31,8 @@ const variants: Record<ButtonVariant, string> = {
   primary: "bg-[#E60000] text-white hover:bg-[#C40000] active:bg-[#A80000] focus-visible:outline-red-400",
   secondary:
     "border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-600 focus-visible:outline-zinc-400",
+  // Sessiz metin bağlantısı (ör. footer sosyal linkleri): çerçeve ve zemin yok, hover yalnızca renk.
+  ghost: "text-zinc-400 hover:text-white focus-visible:outline-zinc-400",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -47,6 +50,7 @@ export default function Button(props: ButtonProps) {
     size = "lg",
     fullWidthOnMobile = false,
     linkOnMobile = false,
+    leadingIcon: LeadingIcon,
     trailingIcon: Icon,
     className,
     children,
@@ -65,6 +69,7 @@ export default function Button(props: ButtonProps) {
 
   const content = (
     <>
+      {LeadingIcon && <LeadingIcon aria-hidden="true" className="w-4 h-4" />}
       {children}
       {Icon && <Icon aria-hidden="true" className={asMobileLink ? "w-4 h-4 sm:hidden" : "w-4 h-4"} />}
     </>
