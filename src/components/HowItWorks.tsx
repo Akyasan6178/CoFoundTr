@@ -29,12 +29,12 @@ export default function HowItWorks() {
           <StepCard
             icon={UserPlus}
             title="1. Vizyonunu paylaş"
-            description="Kendini, projeni veya aradığın eksik yeteneği bize anlat. Formu doldur, seni tamamlayan ortağı bulalım."
+            description="Formu doldur: kendini, projeni ve aradığın becerileri anlat. Eşleşmeyi bu bilgilere göre yapıyoruz."
           />
           <StepCard
             icon={Zap}
             title="2. Test et ve inşa et"
-            description="Tanış, enerjine bak ve birlikte çalışıp çalışamayacağınızı gör. Uyumu yakalarsan girişime hız ver."
+            description="Eşleşmeden önce iki taraf da aynı üç soruyu yanıtlar. Cevapları görüp tanışırsınız; uyum varsa birlikte devam edersiniz."
           />
         </motion.div>
       </div>
