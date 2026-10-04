@@ -26,8 +26,8 @@ export default function App() {
   const closeForm = () => setIsFormOpen(false);
 
   return (
-    <div className="min-h-screen font-sans overflow-x-hidden selection:bg-red-500/30 text-zinc-100">
-      <Navbar />
+    <div className="min-h-screen font-sans overflow-x-clip selection:bg-red-500/30 text-zinc-100">
+      <Navbar onApply={openForm} />
       <Hero onApply={openForm} />
       <HowItWorks />
       <ApplyCTA onApply={openForm} />

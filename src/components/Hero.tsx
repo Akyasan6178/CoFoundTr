@@ -9,7 +9,7 @@ const TRUST_ITEMS = ["Uyum", "Çalışma tarzı", "Niyet"];
 
 export default function Hero({ onApply }: HeroProps) {
   return (
-    <main className="relative pt-12 pb-24 px-6 overflow-hidden">
+    <main className="relative pt-16 sm:pt-20 pb-24 px-6 overflow-hidden">
       {/* Kenarlarına ulaşmadan sönen yumuşak ışık; kesik kenar oluşmaz. */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_50%_at_50%_45%,rgba(230,0,0,0.07),transparent)] pointer-events-none" />
       <div className="max-w-4xl mx-auto text-center relative z-10">
