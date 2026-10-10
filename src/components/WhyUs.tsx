@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ShieldCheck, Target } from "lucide-react";
 import InfoCard from "./InfoCard.tsx";
 import ApplyButton, { type OnApply } from "./ApplyButton.tsx";
+import MatchDiagram from "./MatchDiagram.tsx";
 import { containerVariants } from "../lib/animations.ts";
 
 type WhyUsProps = {
@@ -31,6 +32,7 @@ export default function WhyUs({ onApply }: WhyUsProps) {
             variant="highlight"
             icon={ShieldCheck}
             title="Farklı olarak ne yapıyoruz?"
+            visual={<MatchDiagram />}
             action={
               <div className="flex flex-col items-start gap-3">
                 <p className="text-sm text-fg-muted">Platform açılmadan başvurunu oluşturabilirsin.</p>
