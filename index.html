@@ -9,6 +9,23 @@
     />
     <!-- Mobil tarayıcı çubuğu rengi. data-* değerleri tema değiştiricinin (2A-3) kullanacağı karşılıklar. -->
     <meta name="theme-color" content="#09090b" data-dark="#09090b" data-light="#fafaf9" />
+    <!--
+      Tema, sayfa çizilmeden önce belirlenir (flicker yok): kayıtlı tercih, yoksa sistem teması.
+      Anahtar ve mantık src/lib/theme.ts ile aynı.
+    -->
+    <script>
+      (function () {
+        var pref = "system";
+        try {
+          var saved = localStorage.getItem("cofoundtr-theme");
+          if (saved === "light" || saved === "dark") pref = saved;
+        } catch (e) {}
+        var theme = pref === "system" ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark") : pref;
+        document.documentElement.setAttribute("data-theme", theme);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", meta.getAttribute("data-" + theme));
+      })();
+    </script>
     <title>CoFoundTR · Seni tamamlayan co-founder'ı bul</title>
     <script async src="https://tally.so/widgets/embed.js"></script>
   </head>

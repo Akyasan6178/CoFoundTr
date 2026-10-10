@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ApplyButton, { type OnApply } from "./ApplyButton.tsx";
 import Logo from "./Logo.tsx";
+import { ThemeToggle } from "./ThemeControls.tsx";
 
 type NavbarProps = {
   onApply: OnApply;
@@ -30,12 +31,16 @@ export default function Navbar({ onApply, showCta }: NavbarProps) {
       <nav className="max-w-6xl mx-auto h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between">
         <Logo />
 
-        {/* Gizliyken DOM'da kalır (düzen kaymaz), inert ile odak ve ekran okuyucudan çıkar. */}
-        <div
-          inert={!showCta}
-          className={`transition-opacity duration-200 ${showCta ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-        >
-          <ApplyButton onApply={onApply} source="navbar" size="sm" />
+        <div className="flex items-center gap-2">
+          {/* Gizliyken DOM'da kalır (düzen kaymaz), inert ile odak ve ekran okuyucudan çıkar. */}
+          <div
+            inert={!showCta}
+            className={`transition-opacity duration-200 ${showCta ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+          >
+            <ApplyButton onApply={onApply} source="navbar" size="sm" />
+          </div>
+          {/* En sağda: CTA görünüp kaybolurken yeri değişmez. */}
+          <ThemeToggle />
         </div>
       </nav>
     </header>
