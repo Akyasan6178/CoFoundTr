@@ -11,7 +11,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-canvas">
+    <footer className="divider-top">
       {/* Mobil: logo, sosyal linkler, telif, tema. sm+: solda logo ve telif, sağda tema (üst) ve linkler (telif hizasında). */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 grid gap-6 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-x-8">
         <Logo />

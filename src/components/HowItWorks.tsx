@@ -5,7 +5,7 @@ import { containerVariants } from "../lib/animations.ts";
 
 export default function HowItWorks() {
   return (
-    <section id="nasil-calisir" className="py-24 sm:py-32 px-6 border-t border-line bg-canvas scroll-mt-20">
+    <section id="nasil-calisir" className="py-24 sm:py-32 px-6 divider-top scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

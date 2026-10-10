@@ -11,8 +11,10 @@ type WhyUsProps = {
 
 export default function WhyUs({ onApply }: WhyUsProps) {
   return (
-    <section className="py-24 sm:py-32 px-6 border-t border-line bg-canvas">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-24 sm:py-32 px-6 divider-top">
+      {/* Nötr parlama: diyagramın arkasında; bu bölümde kırmızı ışık yok. */}
+      <div aria-hidden="true" className="absolute inset-0 bg-(image:--pool-neutral) pointer-events-none" />
+      <div className="max-w-4xl mx-auto relative">
         <motion.div
           variants={containerVariants}
           initial="hidden"
