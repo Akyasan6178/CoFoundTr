@@ -37,6 +37,9 @@ export default function TallyModal({ src, onClose }: TallyModalProps) {
                 marginHeight={0}
                 marginWidth={0}
                 title={TALLY_FORM_TITLE}
+                // Tally sayfası color-scheme bildirmiyor; sayfanın koyu şemasıyla eşleşmezse
+                // tarayıcı iframe'e opak zemin boyar. "normal" ile bugünkü görünüm korunur.
+                style={{ colorScheme: "normal" }}
               />
             </div>
           </motion.div>
